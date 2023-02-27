@@ -131,12 +131,15 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CupertinoButton(
-                              child: const AutoSizeText("Download for iOS/iPadOS"),
-                              color: CupertinoDynamicColor.withBrightness(
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Expanded(
+                            child: CupertinoButton(
+                              color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
+                              padding: EdgeInsets.zero,
                               onPressed: () {
                                 if (iOSRelease != null) {
                                   _launchUrl(iOSRelease!);
@@ -145,16 +148,56 @@ class _HomePageState extends State<HomePage> {
                                       const SnackBar(
                                           content: Text("Not Found Release")));
                                 }
-                              }),
-                          SizedBox(
-                            width: 20,
+                              },
+                              child: SizedBox(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(FontAwesomeIcons.download),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        S.of(context).DownloadIPA,
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
-                          CupertinoButton(
-                              color: CupertinoDynamicColor.withBrightness(
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20.0)),
+                          Expanded(
+                            child: CupertinoButton(
+                              color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
-                              child: const AutoSizeText("Download for Android"),
+                              padding: EdgeInsets.zero,
+                              child: SizedBox(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(FontAwesomeIcons.download),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        S.of(context).DownloadAPK,
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               onPressed: () {
                                 if (androidRelease != null) {
                                   _launchUrl(androidRelease!);
@@ -163,10 +206,110 @@ class _HomePageState extends State<HomePage> {
                                       const SnackBar(
                                           content: Text("Not Found Release")));
                                 }
-                              }),
+                              },
+                            ),
+                          ),
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 100,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Expanded(
+                            child: CupertinoButton(
+                              color: const CupertinoDynamicColor.withBrightness(
+                                  color: CupertinoColors.label,
+                                  darkColor:
+                                      CupertinoColors.lightBackgroundGray),
+                              padding: EdgeInsets.zero,
+                              onPressed: () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        content: Text(S.current.ComingSoon)));
+                              },
+                              child: SizedBox(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(FontAwesomeIcons.apple),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        S.of(context).DownloadAppStore,
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20.0)),
+                          Expanded(
+                            child: CupertinoButton(
+                              color: const CupertinoDynamicColor.withBrightness(
+                                  color: CupertinoColors.label,
+                                  darkColor:
+                                      CupertinoColors.lightBackgroundGray),
+                              padding: EdgeInsets.zero,
+                              child: SizedBox(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(FontAwesomeIcons.googlePlay),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Expanded(
+                                      child: AutoSizeText(
+                                        S.of(context).DownloadPlayStore,
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              onPressed: () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        content: Text(S.current.ComingSoon)));
+                              },
+                            ),
+                          ),
+                          const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text(
+                          S.of(context).Copyright,
+                          style: const TextStyle(
+                              color: CupertinoColors.inactiveGray),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
                   ],
                 ),
               ),

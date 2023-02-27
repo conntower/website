@@ -1,4 +1,11 @@
 {
   "Title": "舰桥",
-  "TitleDescription": "跨平台舰队收藏浏览器"
+  "TitleDescription": "跨平台舰队收藏浏览器",
+  "Description": "",
+  "DownloadIPA": "适用于 iOS/iPadOS",
+  "DownloadAppStore": "App Store 下载",
+  "DownloadAPK": "适用于 Android",
+  "DownloadPlayStore": "Google Play 商店下载",
+  "ComingSoon": "敬请期待",
+  "Copyright": "Apple®, iPad®, iPadOS®, App Store® 和 iPhone®是 Apple Inc. 在美国和其他国家或地区的注册商标。\nConningTower图标由AndyChu设计 版权所有 © 2023 ConningTower 保留所有权利。"
 }

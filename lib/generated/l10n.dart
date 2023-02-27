@@ -69,6 +69,76 @@ class S {
       args: [],
     );
   }
+
+  /// ``
+  String get Description {
+    return Intl.message(
+      '',
+      name: 'Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `for iOS/iPadOS`
+  String get DownloadIPA {
+    return Intl.message(
+      'for iOS/iPadOS',
+      name: 'DownloadIPA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download on the App Store`
+  String get DownloadAppStore {
+    return Intl.message(
+      'Download on the App Store',
+      name: 'DownloadAppStore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `for Android`
+  String get DownloadAPK {
+    return Intl.message(
+      'for Android',
+      name: 'DownloadAPK',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download on the Google Play Store`
+  String get DownloadPlayStore {
+    return Intl.message(
+      'Download on the Google Play Store',
+      name: 'DownloadPlayStore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming Soon`
+  String get ComingSoon {
+    return Intl.message(
+      'Coming Soon',
+      name: 'ComingSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved.`
+  String get Copyright {
+    return Intl.message(
+      'Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved.',
+      name: 'Copyright',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

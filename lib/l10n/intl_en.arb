@@ -1,4 +1,11 @@
 {
   "Title": "Conning Tower",
-  "TitleDescription": "a cross-platform KanColle browser."
+  "TitleDescription": "a cross-platform KanColle browser.",
+  "Description": "",
+  "DownloadIPA": "for iOS/iPadOS",
+  "DownloadAppStore": "Download on the App Store",
+  "DownloadAPK": "for Android",
+  "DownloadPlayStore": "Download on the Google Play Store",
+  "ComingSoon": "Coming Soon",
+  "Copyright": "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved."
 }

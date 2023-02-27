@@ -22,6 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
+        "Copyright": MessageLookupByLibrary.simpleMessage(
+            "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved."),
+        "Description": MessageLookupByLibrary.simpleMessage(""),
+        "DownloadAPK": MessageLookupByLibrary.simpleMessage("for Android"),
+        "DownloadAppStore":
+            MessageLookupByLibrary.simpleMessage("Download on the App Store"),
+        "DownloadIPA": MessageLookupByLibrary.simpleMessage("for iOS/iPadOS"),
+        "DownloadPlayStore": MessageLookupByLibrary.simpleMessage(
+            "Download on the Google Play Store"),
         "Title": MessageLookupByLibrary.simpleMessage("Conning Tower"),
         "TitleDescription": MessageLookupByLibrary.simpleMessage(
             "a cross-platform KanColle browser.")
