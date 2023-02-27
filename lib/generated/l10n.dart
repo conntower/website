@@ -130,10 +130,10 @@ class S {
     );
   }
 
-  /// `Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved.`
+  /// `Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved.`
   String get Copyright {
     return Intl.message(
-      'Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved.',
+      'Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved.',
       name: 'Copyright',
       desc: '',
       args: [],

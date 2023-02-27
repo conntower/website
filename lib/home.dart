@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -9,7 +8,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:website/model/github_release.dart';
 import 'package:http/http.dart' as http;
 
-import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,9 +25,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _requestGhRelease();
-    Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
     super.initState();
   }
 

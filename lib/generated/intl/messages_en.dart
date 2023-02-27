@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
-            "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 Apple Inc. All rights reserved."),
+            "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved."),
         "Description": MessageLookupByLibrary.simpleMessage(""),
         "DownloadAPK": MessageLookupByLibrary.simpleMessage("for Android"),
         "DownloadAppStore":
