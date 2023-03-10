@@ -35,7 +35,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
         useMaterial3: true,
       ),
-      home: const Scaffold(body: HomePage()),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Scaffold(body: HomePage(),),
+        '/ios': (context) => const Scaffold(body: IosHomePage(),)
+      },
+      // home: const Scaffold(body: HomePage()),
     );
   }
 }

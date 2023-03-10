@@ -10,6 +10,21 @@ import 'package:http/http.dart' as http;
 
 import 'generated/l10n.dart';
 
+class IosHomePage extends StatefulWidget {
+  const IosHomePage({super.key});
+
+  @override
+  State<IosHomePage> createState() => _IosHomePageState();
+}
+
+class _IosHomePageState extends State<IosHomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text('ios'),);
+  }
+}
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -76,6 +91,9 @@ class _HomePageState extends State<HomePage> {
           trailing: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              GestureDetector(onTap: () {
+                Navigator.pushNamed(context, '/ios');
+              }, child: Text("Go To iOS")),
               IconButton(
                 iconSize: 26,
                 onPressed: () {
@@ -124,11 +142,12 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 100,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Spacer(flex: 1,),
+
                           Expanded(
+                            flex: 2,
                             child: CupertinoButton(
                               color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
@@ -144,55 +163,21 @@ class _HomePageState extends State<HomePage> {
                                           content: Text("Not Found Release")));
                                 }
                               },
-                              child: SizedBox(
-                                width: 200,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(FontAwesomeIcons.download),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: AutoSizeText(
-                                        S.of(context).DownloadIPA,
-                                        minFontSize: 8,
-                                        maxLines: 1,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadIPA, iconData: FontAwesomeIcons.download,)
                             ),
                           ),
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20.0)),
+                          Spacer(flex: 1,),
+
                           Expanded(
+                            flex: 2,
+
                             child: CupertinoButton(
                               color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
                               padding: EdgeInsets.zero,
-                              child: SizedBox(
-                                width: 200,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(FontAwesomeIcons.download),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: AutoSizeText(
-                                        S.of(context).DownloadAPK,
-                                        minFontSize: 8,
-                                        maxLines: 1,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadIPA, iconData: FontAwesomeIcons.download,),
                               onPressed: () {
                                 if (androidRelease != null) {
                                   _launchUrl(androidRelease!);
@@ -204,8 +189,8 @@ class _HomePageState extends State<HomePage> {
                               },
                             ),
                           ),
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Spacer(flex: 1,),
+
                         ],
                       ),
                     ),
@@ -214,69 +199,17 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Spacer(flex: 1,),
                           Expanded(
+                            flex: 2,
+
                             child: CupertinoButton(
                               color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
                               padding: EdgeInsets.zero,
-                              onPressed: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                        content: Text(S.current.ComingSoon)));
-                              },
-                              child: SizedBox(
-                                width: 200,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(FontAwesomeIcons.apple),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: AutoSizeText(
-                                        S.of(context).DownloadAppStore,
-                                        minFontSize: 8,
-                                        maxLines: 1,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20.0)),
-                          Expanded(
-                            child: CupertinoButton(
-                              color: const CupertinoDynamicColor.withBrightness(
-                                  color: CupertinoColors.label,
-                                  darkColor:
-                                      CupertinoColors.lightBackgroundGray),
-                              padding: EdgeInsets.zero,
-                              child: SizedBox(
-                                width: 200,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(FontAwesomeIcons.googlePlay),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Expanded(
-                                      child: AutoSizeText(
-                                        S.of(context).DownloadPlayStore,
-                                        minFontSize: 8,
-                                        maxLines: 1,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadPlayStore, iconData: FontAwesomeIcons.googlePlay,),
                               onPressed: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
@@ -284,8 +217,8 @@ class _HomePageState extends State<HomePage> {
                               },
                             ),
                           ),
-                          const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 40.0)),
+                          Spacer(flex: 1,),
+
                         ],
                       ),
                     ),
@@ -312,6 +245,42 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class CupertinoButtonCustomChild extends StatelessWidget {
+  const CupertinoButtonCustomChild({
+    super.key,
+    required this.text, required this.iconData,
+  });
+  final String text;
+  final IconData iconData;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Spacer(flex: 1,),
+        Icon(iconData),
+        Spacer(flex: 1,),
+        Expanded(
+          flex: 5,
+          child: SizedBox(
+            height: 50,
+            child: Center(
+              child: AutoSizeText(
+                text,
+                minFontSize: 8,
+                maxLines: 1,
+              ),
+            ),
+          ),
+        ),
+        Spacer(flex: 1,),
+
+      ],
     );
   }
 }
