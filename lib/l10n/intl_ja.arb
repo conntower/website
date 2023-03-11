@@ -1,0 +1,21 @@
+{
+  "@@locale": "ja",
+  "LiteDes1": "「ConningTower Lite」は、「ConningTower for iOS」の軽量版です。よりスムーズに動作します。",
+  "TitleIOS": "ConningTower for iOS",
+  "TitleLite": "ConningTower Lite",
+  "Title": "ConningTower",
+  "TitleDescription": "クロスプラットフォームの艦これ専ブラ",
+  "Description": "",
+  "DownloadIPA": "iOS/iPadOS用IPAファイルのダウンロード",
+  "DownloadAppStore": "App Storeでダウンロード",
+  "DownloadAPK": "Android用APKファイルのダウンロード",
+  "DownloadPlayStore": "Google Play ストアでダウンロード",
+  "TestFlight": "TestFlightでAppをテストする",
+  "ComingSoon": "お楽しみに",
+  "LatestVersion": "最新バージョン",
+  "GoToIOS": "iOS版に移動",
+  "AppStoreDes1": "「ConningTower for iOS」は、ブラウザゲーム専用のブラウザで、画面をカスタマイズして、デスクトップビューで常に横向き画面を保持することができます。",
+  "AppStoreDes2": "「ConningTower for iOS」は、ConningTowerオープンソースプロジェクトとは独立したクローズドな派生バージョンであり、両者は同じではありません。「ConningTower for iOS」は、艦これの第三者クライアントではありません。一般的なウェブゲームブラウザであり、一部のウェブページウィンドウに特別な適応を行いますが、本アプリケーションは特定のウェブサイトを対象としていません。",
+  "Copyright": "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved.",
+  "KCCopyright": "\"艦隊これくしょん\", \"艦これ\", and \"艦娘\" are trademarks of EXNOA LLC."
+}

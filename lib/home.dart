@@ -3,12 +3,20 @@ import 'dart:convert';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:website/model/github_release.dart';
 import 'package:http/http.dart' as http;
 
 import 'generated/l10n.dart';
+import 'helper.dart';
+
+Future<void> _launchUrl(String url) async {
+  if (!await launchUrl(Uri.parse(url))) {
+    throw Exception('Could not launch $url');
+  }
+}
 
 class IosHomePage extends StatefulWidget {
   const IosHomePage({super.key});
@@ -18,10 +26,162 @@ class IosHomePage extends StatefulWidget {
 }
 
 class _IosHomePageState extends State<IosHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('ios'),);
+    return CupertinoApp(
+      theme: const CupertinoThemeData(primaryColor: CupertinoColors.label),
+      debugShowCheckedModeBanner: false,
+      home: CupertinoPageScaffold(
+        navigationBar: CupertinoNavigationBar(
+          leading: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                S.of(context).TitleIOS,
+                style: TextStyle(fontSize: 22.0),
+              ),
+            ],
+          ),
+          trailing: IconButton(
+            iconSize: 26,
+            onPressed: () {
+              _launchUrl("https://twitter.com/conntower");
+            },
+            icon: const Icon(FontAwesomeIcons.twitter),
+          ),
+        ),
+        child: SafeArea(
+          child: CustomScrollView(
+            slivers: [
+              SliverList(
+                delegate: SliverChildListDelegate(
+                  [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 100, bottom: 100),
+                      child: SizedBox(
+                          height: 200,
+                          width: 200,
+                          child: Image.asset('assets/images/logo.png')),
+                    ),
+                    SizedBox(
+                      height: 100,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 110.0),
+                        child: FittedBox(
+                          child: Text(
+                            S.of(context).TitleIOS,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        child: Center(child: Text(S.of(context).AppStoreDes1)),
+                      ),
+                    ),
+                    SizedBox(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        child: Center(child: Text(S.of(context).AppStoreDes2)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 100,
+                      child: Center(
+                        child: GestureDetector(
+                          onTap: () => ScaffoldMessenger.of(context)
+                              .showSnackBar(
+                                  SnackBar(content: Text(S.current.ComingSoon)))
+                          // _launchUrl('https://apps.apple.com/app/idxxxxx')
+                          ,
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              getSvgIconPath(),
+                              height: 50.0,
+                              width: 200.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 100,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 110.0),
+                        child: FittedBox(
+                          child: Text(
+                            S.of(context).TitleLite,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        child: Center(child: Text(S.of(context).LiteDes1)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 100,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Spacer(
+                            flex: 1,
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: CupertinoButton(
+                              color: const CupertinoDynamicColor.withBrightness(
+                                  color: CupertinoColors.label,
+                                  darkColor:
+                                      CupertinoColors.lightBackgroundGray),
+                              padding: EdgeInsets.zero,
+                              child: CupertinoButtonCustomChild(
+                                text: S.of(context).TestFlight,
+                                iconData: FontAwesomeIcons.apple,
+                              ),
+                              onPressed: () {
+                                _launchUrl("https://testflight.apple.com/join/SV9nxyox");
+                              },
+                            ),
+                          ),
+                          Spacer(
+                            flex: 1,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text(
+                          "${S.of(context).KCCopyright}\n${S.of(context).Copyright}",
+                          style: const TextStyle(
+                              color: CupertinoColors.inactiveGray),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
 
@@ -43,12 +203,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
-  Future<void> _launchUrl(String url) async {
-    if (!await launchUrl(Uri.parse(url))) {
-      throw Exception('Could not launch $url');
-    }
-  }
-
   Future<void> _requestGhRelease() async {
     Uri uri = Uri.parse(
         'https://api.github.com/repos/andychucs/conning_tower/releases/latest');
@@ -59,7 +213,7 @@ class _HomePageState extends State<HomePage> {
       var asserts = release?.assets;
       if (asserts!.length >= 2) {
         asserts.forEach((element) {
-          if (element.browserDownloadUrl.endsWith("arm64-v8a-release.apk")) {
+          if (element.browserDownloadUrl.endsWith("apk")) {
             androidRelease = element.browserDownloadUrl;
           }
           if (element.browserDownloadUrl.endsWith("ipa")) {
@@ -78,22 +232,23 @@ class _HomePageState extends State<HomePage> {
       title: '${S.of(context).Title} - ${S.of(context).TitleDescription}',
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: FittedBox(
-              fit: BoxFit.fitHeight,
-              child: AutoSizeText(
+          leading: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
                 S.of(context).Title,
-                maxLines: 1,
+                style: TextStyle(fontSize: 22.0),
               ),
-            ),
+            ],
           ),
           trailing: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              GestureDetector(onTap: () {
-                Navigator.pushNamed(context, '/ios');
-              }, child: Text("Go To iOS")),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/ios');
+                  },
+                  child: Text(S.of(context).GoToIOS)),
               IconButton(
                 iconSize: 26,
                 onPressed: () {
@@ -138,46 +293,56 @@ class _HomePageState extends State<HomePage> {
                       child:
                           Center(child: Text(S.of(context).TitleDescription)),
                     ),
-                    Center(child: Text("Latest Version: ${release?.tagName}")),
+                    Center(
+                        child: Text(
+                            "${S.of(context).LatestVersion}: ${release?.tagName}")),
                     SizedBox(
                       height: 100,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Spacer(flex: 1,),
-
-                          Expanded(
-                            flex: 2,
-                            child: CupertinoButton(
-                              color: const CupertinoDynamicColor.withBrightness(
-                                  color: CupertinoColors.label,
-                                  darkColor:
-                                      CupertinoColors.lightBackgroundGray),
-                              padding: EdgeInsets.zero,
-                              onPressed: () {
-                                if (iOSRelease != null) {
-                                  _launchUrl(iOSRelease!);
-                                } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                          content: Text("Not Found Release")));
-                                }
-                              },
-                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadIPA, iconData: FontAwesomeIcons.download,)
-                            ),
+                          Spacer(
+                            flex: 1,
                           ),
-                          Spacer(flex: 1,),
-
                           Expanded(
                             flex: 2,
-
+                            child: CupertinoButton(
+                                color:
+                                    const CupertinoDynamicColor.withBrightness(
+                                        color: CupertinoColors.label,
+                                        darkColor: CupertinoColors
+                                            .lightBackgroundGray),
+                                padding: EdgeInsets.zero,
+                                onPressed: () {
+                                  if (iOSRelease != null) {
+                                    _launchUrl(iOSRelease!);
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                        const SnackBar(
+                                            content:
+                                                Text("Not Found Release")));
+                                  }
+                                },
+                                child: CupertinoButtonCustomChild(
+                                  text: S.of(context).DownloadIPA,
+                                  iconData: FontAwesomeIcons.download,
+                                )),
+                          ),
+                          Spacer(
+                            flex: 1,
+                          ),
+                          Expanded(
+                            flex: 2,
                             child: CupertinoButton(
                               color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
                               padding: EdgeInsets.zero,
-                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadIPA, iconData: FontAwesomeIcons.download,),
+                              child: CupertinoButtonCustomChild(
+                                text: S.of(context).DownloadAPK,
+                                iconData: FontAwesomeIcons.download,
+                              ),
                               onPressed: () {
                                 if (androidRelease != null) {
                                   _launchUrl(androidRelease!);
@@ -189,8 +354,9 @@ class _HomePageState extends State<HomePage> {
                               },
                             ),
                           ),
-                          Spacer(flex: 1,),
-
+                          Spacer(
+                            flex: 1,
+                          ),
                         ],
                       ),
                     ),
@@ -199,17 +365,21 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Spacer(flex: 1,),
+                          Spacer(
+                            flex: 1,
+                          ),
                           Expanded(
-                            flex: 2,
-
+                            flex: 1,
                             child: CupertinoButton(
                               color: const CupertinoDynamicColor.withBrightness(
                                   color: CupertinoColors.label,
                                   darkColor:
                                       CupertinoColors.lightBackgroundGray),
                               padding: EdgeInsets.zero,
-                              child: CupertinoButtonCustomChild(text: S.of(context).DownloadPlayStore, iconData: FontAwesomeIcons.googlePlay,),
+                              child: CupertinoButtonCustomChild(
+                                text: S.of(context).DownloadPlayStore,
+                                iconData: FontAwesomeIcons.googlePlay,
+                              ),
                               onPressed: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
@@ -217,8 +387,9 @@ class _HomePageState extends State<HomePage> {
                               },
                             ),
                           ),
-                          Spacer(flex: 1,),
-
+                          Spacer(
+                            flex: 1,
+                          ),
                         ],
                       ),
                     ),
@@ -229,7 +400,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Text(
-                          S.of(context).Copyright,
+                          "${S.of(context).KCCopyright}\n${S.of(context).Copyright}",
                           style: const TextStyle(
                               color: CupertinoColors.inactiveGray),
                         ),
@@ -252,7 +423,8 @@ class _HomePageState extends State<HomePage> {
 class CupertinoButtonCustomChild extends StatelessWidget {
   const CupertinoButtonCustomChild({
     super.key,
-    required this.text, required this.iconData,
+    required this.text,
+    required this.iconData,
   });
   final String text;
   final IconData iconData;
@@ -262,9 +434,11 @@ class CupertinoButtonCustomChild extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Spacer(flex: 1,),
-        Icon(iconData),
-        Spacer(flex: 1,),
+        // Spacer(flex: 1,),
+        // Icon(iconData),
+        Spacer(
+          flex: 1,
+        ),
         Expanded(
           flex: 5,
           child: SizedBox(
@@ -278,8 +452,9 @@ class CupertinoButtonCustomChild extends StatelessWidget {
             ),
           ),
         ),
-        Spacer(flex: 1,),
-
+        Spacer(
+          flex: 1,
+        ),
       ],
     );
   }

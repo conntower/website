@@ -22,18 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "AppStoreDes1": MessageLookupByLibrary.simpleMessage(
+            "ConningTower for iOS is a browser designed specifically for playing browser games. It lets you customize your screen and stay in landscape mode with desktop view at all times."),
+        "AppStoreDes2": MessageLookupByLibrary.simpleMessage(
+            "ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is not a third-party client of KanColle, it is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website."),
         "ComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
             "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved."),
         "Description": MessageLookupByLibrary.simpleMessage(""),
-        "DownloadAPK": MessageLookupByLibrary.simpleMessage("for Android"),
+        "DownloadAPK":
+            MessageLookupByLibrary.simpleMessage("APK file for Android"),
         "DownloadAppStore":
             MessageLookupByLibrary.simpleMessage("Download on the App Store"),
-        "DownloadIPA": MessageLookupByLibrary.simpleMessage("for iOS/iPadOS"),
+        "DownloadIPA":
+            MessageLookupByLibrary.simpleMessage("IPA file for iOS/iPadOS"),
         "DownloadPlayStore": MessageLookupByLibrary.simpleMessage(
-            "Download on the Google Play Store"),
-        "Title": MessageLookupByLibrary.simpleMessage("Conning Tower"),
+            "Download on Google Play Store"),
+        "GoToIOS": MessageLookupByLibrary.simpleMessage("View iOS version"),
+        "KCCopyright": MessageLookupByLibrary.simpleMessage(
+            "\"艦隊これくしょん\", \"艦これ\", and \"艦娘\" are trademarks of EXNOA LLC."),
+        "LatestVersion": MessageLookupByLibrary.simpleMessage("Latest Version"),
+        "LiteDes1": MessageLookupByLibrary.simpleMessage(
+            "ConningTower Lite is a lightweight version of ConningTower for iOS. Runs more smoothly."),
+        "TestFlight":
+            MessageLookupByLibrary.simpleMessage("Use TestFlight test App"),
+        "Title": MessageLookupByLibrary.simpleMessage("ConningTower"),
         "TitleDescription": MessageLookupByLibrary.simpleMessage(
-            "a cross-platform KanColle browser.")
+            "a Cross-platform KanColle browser"),
+        "TitleIOS":
+            MessageLookupByLibrary.simpleMessage("ConningTower for iOS"),
+        "TitleLite": MessageLookupByLibrary.simpleMessage("ConningTower Lite")
       };
 }

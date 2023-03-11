@@ -1,0 +1,21 @@
+{
+  "@@locale": "zh_HK",
+  "LiteDes1": "艦橋Lite是艦橋iOS版的輕量化版本。運行更加流暢。",
+  "TitleIOS": "艦橋iOS版",
+  "TitleLite": "艦橋Lite",
+  "Title": "艦橋",
+  "TitleDescription": "跨平台艦隊收藏瀏覽器",
+  "Description": "",
+  "DownloadIPA": "適用於 iOS/iPadOS 的IPA文件",
+  "DownloadAppStore": "App Store 下載",
+  "DownloadAPK": "適用於 Android 的APK文件",
+  "DownloadPlayStore": "Google Play 商店下載",
+  "TestFlight": "使用 TestFlight 測試 App",
+  "ComingSoon": "敬請期待",
+  "LatestVersion": "最新版本",
+  "GoToIOS": "前往iOS專版",
+  "AppStoreDes1": "艦橋是一款為瀏覽器遊戲設計的瀏覽器，可以定制您的屏幕並保持橫向桌面視圖。",
+  "AppStoreDes2": "艦橋iOS版是獨立於艦橋開源項目的閉源分支，兩者並不等同。艦橋iOS版並非艦隊Collection的第三方客戶端，艦橋iOS版是通用的網頁遊戲瀏覽器，誠然艦橋iOS版會對部分網頁窗口做出特殊適配，但本應用並不針對某一特定網站。",
+  "Copyright": "Apple®, iPad®, iPadOS®, App Store® 和 iPhone®是 Apple Inc. 在美國和其他國家或地區的註冊商標。\nConningTower圖標由AndyChu設計 版權所有 © 2023 ConningTower 保留所有權利。",
+  "KCCopyright": "“艦隊これくしょん”、“艦これ”、“艦娘”等商標屬於合同會社EXNOA所有。"
+}

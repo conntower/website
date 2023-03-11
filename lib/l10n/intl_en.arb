@@ -1,11 +1,21 @@
 {
-  "Title": "Conning Tower",
-  "TitleDescription": "a cross-platform KanColle browser.",
+  "@@locale": "en",
+  "LiteDes1": "ConningTower Lite is a lightweight version of ConningTower for iOS. Runs more smoothly.",
+  "TitleIOS": "ConningTower for iOS",
+  "TitleLite": "ConningTower Lite",
+  "Title": "ConningTower",
+  "TitleDescription": "a Cross-platform KanColle browser",
   "Description": "",
-  "DownloadIPA": "for iOS/iPadOS",
+  "DownloadIPA": "IPA file for iOS/iPadOS",
   "DownloadAppStore": "Download on the App Store",
-  "DownloadAPK": "for Android",
-  "DownloadPlayStore": "Download on the Google Play Store",
+  "DownloadAPK": "APK file for Android",
+  "DownloadPlayStore": "Download on Google Play Store",
+  "TestFlight": "Use TestFlight test App",
+  "LatestVersion": "Latest Version",
   "ComingSoon": "Coming Soon",
-  "Copyright": "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved."
+  "GoToIOS": "View iOS version",
+  "AppStoreDes1": "ConningTower for iOS is a browser designed specifically for playing browser games. It lets you customize your screen and stay in landscape mode with desktop view at all times.",
+  "AppStoreDes2": "ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is not a third-party client of KanColle, it is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website.",
+  "Copyright": "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved.",
+  "KCCopyright": "\"艦隊これくしょん\", \"艦これ\", and \"艦娘\" are trademarks of EXNOA LLC."
 }
