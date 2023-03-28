@@ -76,15 +76,15 @@ class _IosHomePageState extends State<IosHomePage> {
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      // height: 50,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 80.0),
                         child: Center(child: Text(S.of(context).AppStoreDes1)),
                       ),
                     ),
                     SizedBox(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 80.0),
                         child: Center(child: Text(S.of(context).AppStoreDes2)),
                       ),
                     ),
@@ -92,10 +92,8 @@ class _IosHomePageState extends State<IosHomePage> {
                       height: 100,
                       child: Center(
                         child: GestureDetector(
-                          onTap: () => ScaffoldMessenger.of(context)
-                              .showSnackBar(
-                                  SnackBar(content: Text(S.current.ComingSoon)))
-                          // _launchUrl('https://apps.apple.com/app/idxxxxx')
+                          onTap: () =>
+                          _launchUrl('https://apps.apple.com/app/conningtower/id6446080475')
                           ,
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
@@ -121,9 +119,9 @@ class _IosHomePageState extends State<IosHomePage> {
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      // height: 50,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 80.0),
                         child: Center(child: Text(S.of(context).LiteDes1)),
                       ),
                     ),
