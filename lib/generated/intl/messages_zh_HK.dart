@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "AppStoreDes1": MessageLookupByLibrary.simpleMessage(
             "艦橋是一款為瀏覽器遊戲設計的瀏覽器，可以定制您的屏幕並保持橫向桌面視圖。"),
         "AppStoreDes2": MessageLookupByLibrary.simpleMessage(
-            "艦橋iOS版是獨立於艦橋開源項目的閉源分支，兩者並不等同。艦橋iOS版並非艦隊Collection的第三方客戶端，艦橋iOS版是通用的網頁遊戲瀏覽器，誠然艦橋iOS版會對部分網頁窗口做出特殊適配，但本應用並不針對某一特定網站。"),
+            "艦橋iOS版是獨立於艦橋開源項目的閉源分支，兩者並不等同。艦橋iOS版是通用的網頁遊戲瀏覽器，誠然艦橋iOS版會對部分網頁窗口做出特殊適配，但本應用並不針對某一特定網站。"),
         "ComingSoon": MessageLookupByLibrary.simpleMessage("敬請期待"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
             "Apple®, iPad®, iPadOS®, App Store® 和 iPhone®是 Apple Inc. 在美國和其他國家或地區的註冊商標。\nConningTower圖標由AndyChu設計 版權所有 © 2023 ConningTower 保留所有權利。"),

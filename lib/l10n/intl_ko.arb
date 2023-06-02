@@ -3,7 +3,7 @@
   "LiteDes1": "ConningTower Lite는 ConningTower for iOS의 경량 버전입니다. 더 부드럽게 작동합니다.",
   "TitleIOS": "ConningTower for iOS",
   "TitleLite": "ConningTower Lite",
-  "Title": "커닝타워",
+  "Title": "ConningTower",
   "TitleDescription": "멀티 플랫폼 함대 수집 브라우저",
   "Description": "",
   "DownloadIPA": "iOS/iPadOS용 IPA 파일 다운로드",
@@ -13,8 +13,8 @@
   "ComingSoon": "곧 출시 예정",
   "LatestVersion": "최신 버전",
   "GoToIOS": "iOS 버전으로 이동",
-  "AppStoreDes1": "커닝타워는 사용자가 화면을 맞춤 설정하고 컴퓨터 모드 가로 화면을 사용할 수 있는 온라인 게임 전용 브라우저입니다.",
-  "AppStoreDes2": "커닝타워 iOS 버전은 오픈 소스 프로젝트인 커닝타워와 별개의 클로즈드 소스 브랜치입니다. 둘은 동일하지 않습니다. 커닝타워 iOS 버전은 함대 수집 게임인 KanColle의 제3자 클라이언트가 아니라 온라인 게임의 범용 브라우저입니다. 커닝타워 iOS 버전은 특정 웹 페이지 창에 대해 특별한 적응을 하지만, 이 앱은 특정 웹 사이트를 대상으로하지 않습니다.",
+  "AppStoreDes1": "ConningTower 사용자가 화면을 맞춤 설정하고 컴퓨터 모드 가로 화면을 사용할 수 있는 온라인 게임 전용 브라우저입니다.",
+  "AppStoreDes2": "ConningTower iOS 버전은 오픈 소스 프로젝트인 커닝타워와 별개의 클로즈드 소스 브랜치입니다. 둘은 동일하지 않습니다. ConningTower iOS 버전은 특정 웹 페이지 창에 대해 특별한 적응을 하지만, 이 앱은 특정 웹 사이트를 대상으로하지 않습니다.",
   "Copyright": "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved.",
   "KCCopyright": "\"艦隊これくしょん\", \"艦これ\", and \"艦娘\" are trademarks of EXNOA LLC."
 }

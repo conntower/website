@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "AppStoreDes1": MessageLookupByLibrary.simpleMessage(
             "ConningTower for iOS is a browser designed specifically for playing browser games. It lets you customize your screen and stay in landscape mode with desktop view at all times."),
         "AppStoreDes2": MessageLookupByLibrary.simpleMessage(
-            "ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is not a third-party client of KanColle, it is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website."),
+            "ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website."),
         "ComingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
             "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved."),

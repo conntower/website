@@ -162,7 +162,7 @@ class _IosHomePageState extends State<IosHomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Text(
-                          "${S.of(context).KCCopyright}\n${S.of(context).Copyright}",
+                          S.of(context).Copyright,
                           style: const TextStyle(
                               color: CupertinoColors.inactiveGray),
                         ),

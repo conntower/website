@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "AppStoreDes1": MessageLookupByLibrary.simpleMessage(
             "舰桥是一款可定制屏幕并保持电脑模式横向画面使用的网页游戏专用浏览器。"),
         "AppStoreDes2": MessageLookupByLibrary.simpleMessage(
-            "舰桥iOS版是独立于舰桥开源项目的闭源分支，两者并不等同。舰桥iOS版并非舰队Collection的第三方客户端，舰桥iOS版是通用的网页游戏浏览器，诚然舰桥iOS版会对部分网页窗口做出特殊适配，但本应用并不针对某一特定网站。"),
+            "舰桥iOS版是独立于舰桥开源项目的闭源分支，两者并不等同。舰桥iOS版是通用的网页游戏浏览器，诚然舰桥iOS版会对部分网页窗口做出特殊适配，但本应用并不针对某一特定网站。"),
         "ComingSoon": MessageLookupByLibrary.simpleMessage("敬请期待"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
             "Apple®, iPad®, iPadOS®, App Store® 和 iPhone®是 Apple Inc. 在美国和其他国家或地区的注册商标。\nConningTower图标由AndyChu设计 版权所有 © 2023 ConningTower 保留所有权利。"),

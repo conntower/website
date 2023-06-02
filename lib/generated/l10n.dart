@@ -200,10 +200,10 @@ class S {
     );
   }
 
-  /// `ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is not a third-party client of KanColle, it is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website.`
+  /// `ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website.`
   String get AppStoreDes2 {
     return Intl.message(
-      'ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is not a third-party client of KanColle, it is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website.',
+      'ConningTower iOS version is a closed-source branch independent of the ConningTower open-source project. The two are not equal. ConningTower iOS version is a universal web game browser. While the ConningTower iOS version will make special adaptations to some web page windows, this application is not aimed at any specific website.',
       name: 'AppStoreDes2',
       desc: '',
       args: [],
@@ -237,9 +237,6 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
-      Locale.fromSubtags(languageCode: 'de'),
-      Locale.fromSubtags(languageCode: 'es'),
-      Locale.fromSubtags(languageCode: 'fr'),
       Locale.fromSubtags(languageCode: 'ja'),
       Locale.fromSubtags(languageCode: 'ko'),
       Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),

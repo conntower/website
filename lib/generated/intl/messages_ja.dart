@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "AppStoreDes1": MessageLookupByLibrary.simpleMessage(
             "「ConningTower for iOS」は、ブラウザゲーム専用のブラウザで、画面をカスタマイズして、デスクトップビューで常に横向き画面を保持することができます。"),
         "AppStoreDes2": MessageLookupByLibrary.simpleMessage(
-            "「ConningTower for iOS」は、ConningTowerオープンソースプロジェクトとは独立したクローズドな派生バージョンであり、両者は同じではありません。「ConningTower for iOS」は、艦これの第三者クライアントではありません。一般的なウェブゲームブラウザであり、一部のウェブページウィンドウに特別な適応を行いますが、本アプリケーションは特定のウェブサイトを対象としていません。"),
+            "「ConningTower for iOS」は、ConningTowerオープンソースプロジェクトとは独立したクローズドな派生バージョンであり、両者は同じではありません。「ConningTower for iOS」は一般的なウェブゲームブラウザであり、一部のウェブページウィンドウに特別な適応を行いますが、本アプリケーションは特定のウェブサイトを対象としていません。"),
         "ComingSoon": MessageLookupByLibrary.simpleMessage("お楽しみに"),
         "Copyright": MessageLookupByLibrary.simpleMessage(
             "Apple®, iPad®, iPadOS®, App Store® and iPhone® are trademarks of Apple Inc., registered in the U.S. and other countries and regions.\nConningTower icon designed by Andy Chu Copyright © 2023 ConningTower All rights reserved."),
