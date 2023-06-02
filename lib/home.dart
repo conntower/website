@@ -135,19 +135,18 @@ class _IosHomePageState extends State<IosHomePage> {
                           ),
                           Expanded(
                             flex: 1,
-                            child: CupertinoButton(
-                              color: const CupertinoDynamicColor.withBrightness(
-                                  color: CupertinoColors.label,
-                                  darkColor:
-                                      CupertinoColors.lightBackgroundGray),
-                              padding: EdgeInsets.zero,
-                              child: CupertinoButtonCustomChild(
-                                text: S.of(context).TestFlight,
-                                iconData: FontAwesomeIcons.apple,
+                            child: GestureDetector(
+                              onTap: () =>
+                                  _launchUrl('https://apps.apple.com/app/conningtowerlite/id6446118603')
+                              ,
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: SvgPicture.asset(
+                                  getSvgIconPath(),
+                                  height: 50.0,
+                                  width: 200.0,
+                                ),
                               ),
-                              onPressed: () {
-                                _launchUrl("https://testflight.apple.com/join/SV9nxyox");
-                              },
                             ),
                           ),
                           Spacer(
