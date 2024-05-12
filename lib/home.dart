@@ -47,7 +47,7 @@ class _IosHomePageState extends State<IosHomePage> {
             onPressed: () {
               _launchUrl("https://twitter.com/conntower");
             },
-            icon: const Icon(FontAwesomeIcons.twitter),
+            icon: const Icon(FontAwesomeIcons.xTwitter),
           ),
         ),
         child: SafeArea(
@@ -257,7 +257,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   _launchUrl("https://twitter.com/conntower");
                 },
-                icon: const Icon(FontAwesomeIcons.twitter),
+                icon: const Icon(FontAwesomeIcons.xTwitter),
               ),
             ],
           ),
