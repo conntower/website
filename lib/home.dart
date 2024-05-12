@@ -92,9 +92,8 @@ class _IosHomePageState extends State<IosHomePage> {
                       height: 100,
                       child: Center(
                         child: GestureDetector(
-                          onTap: () =>
-                          _launchUrl('https://apps.apple.com/app/conningtower/id6446080475')
-                          ,
+                          onTap: () => _launchUrl(
+                              'https://apps.apple.com/app/conningtower/id6446080475'),
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
                             child: SvgPicture.asset(
@@ -136,9 +135,8 @@ class _IosHomePageState extends State<IosHomePage> {
                           Expanded(
                             flex: 1,
                             child: GestureDetector(
-                              onTap: () =>
-                                  _launchUrl('https://apps.apple.com/app/conningtowerlite/id6446118603')
-                              ,
+                              onTap: () => _launchUrl(
+                                  'https://apps.apple.com/app/conningtowerlite/id6446118603'),
                               child: Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: SvgPicture.asset(
@@ -241,11 +239,12 @@ class _HomePageState extends State<HomePage> {
           trailing: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/ios');
+              CupertinoButton(
+                padding: EdgeInsets.zero,
+                  onPressed: () {
+                    _launchUrl("https://nextnavi.github.io/");
                   },
-                  child: Text(S.of(context).GoToIOS)),
+                  child: const Text("NextNavi")),
               IconButton(
                 iconSize: 26,
                 onPressed: () {

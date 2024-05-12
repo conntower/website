@@ -38,7 +38,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const Scaffold(body: HomePage(),),
-        '/ios': (context) => const Scaffold(body: IosHomePage(),)
       },
       // home: const Scaffold(body: HomePage()),
     );
