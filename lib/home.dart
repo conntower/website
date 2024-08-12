@@ -239,12 +239,12 @@ class _HomePageState extends State<HomePage> {
           trailing: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              CupertinoButton(
-                padding: EdgeInsets.zero,
-                  onPressed: () {
-                    _launchUrl("https://nextnavi.github.io/");
-                  },
-                  child: const Text("NextNavi")),
+              // CupertinoButton(
+              //   padding: EdgeInsets.zero,
+              //     onPressed: () {
+              //       _launchUrl("https://nextnavi.github.io/");
+              //     },
+              //     child: const Text("NextNavi")),
               IconButton(
                 iconSize: 26,
                 onPressed: () {
@@ -255,7 +255,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 iconSize: 26,
                 onPressed: () {
-                  _launchUrl("https://twitter.com/conntower");
+                  _launchUrl("https://x.com/contwr");
                 },
                 icon: const Icon(FontAwesomeIcons.xTwitter),
               ),
